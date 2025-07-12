@@ -1,0 +1,25 @@
+# Source files (only ship compiled dist/)
+src/
+tsconfig.json
+
+# Development and testing
+example/
+test/
+*.test.ts
+*.spec.ts
+
+# Development tools
+.vscode/
+.idea/
+*.log
+.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# Node modules (shouldn't be included anyway)
+node_modules/
+
+# Build artifacts we don't want to ship
+*.tsbuildinfo 

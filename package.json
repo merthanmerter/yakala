@@ -1,0 +1,43 @@
+{
+	"name": "yakala",
+	"version": "0.0.11",
+	"description": "A comprehensive error handling library with retry, circuit breaker, and transformation capabilities",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/merthanmerter/yakala.git"
+	},
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"files": [
+		"dist/",
+		"README.md",
+		"LICENSE.md"
+	],
+	"scripts": {
+		"build": "tsc && terser dist/index.js -c -m -o dist/index.js",
+		"test": "cd test-project && npm run test",
+		"dev": "tsc --watch",
+		"pack": "npm run build && npm pack",
+		"prepublishOnly": "npm run build"
+	},
+	"keywords": [
+		"error-handling",
+		"retry",
+		"circuit-breaker",
+		"async",
+		"promise"
+	],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"terser": "^5.43.1",
+		"typescript": "^5.0.0"
+	}
+}
